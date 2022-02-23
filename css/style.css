@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Point';
+    src: url('../fonts/Point-Regular.woff2') format('woff2'),
+        url('../fonts/Point-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Point';
+    src: url('../fonts/Point-Bold.woff2') format('woff2'),
+        url('../fonts/Point-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Point';
+    src: url('../fonts/Point-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Point-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Point", sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    color: #18191F;
+}
+
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
