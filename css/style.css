@@ -1,3 +1,35 @@
+/* CSS reset */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+/* --------------- */
+
 @font-face {
     font-family: 'Point';
     src: url('../fonts/Point-Regular.woff2') format('woff2'),
@@ -25,12 +57,6 @@
     font-display: swap;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
     font-family: "Point", sans-serif;
@@ -56,3 +82,270 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+/* Header styles */
+
+.header {
+    background-color: black;
+    color: white;
+    background-image: url('../img/header_background_min.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.header__container {
+ padding: 0 20px;
+}
+
+.top-nav__wrapper {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo img {
+    width: 220px;
+    height: 69px;
+}
+
+.top-nav__actions {
+    display: flex;
+    align-items: center;
+}
+
+.header__phone {
+    font-size: 2.7rem;
+    font-weight: 800;
+    color: white;
+    line-height: 2.7rem;
+    padding-top: 1rem;
+    margin-right: 1rem;
+}
+
+.header__phone:hover {
+    color: #FF5C01;
+}
+
+.actions__lang {
+    line-height: 1.25rem;
+    padding-top: 1rem;
+}
+
+.lang__item a {
+    color: white;
+}
+
+.lang__item a:active {
+    font-weight: 700;
+}
+
+.lang__item a:hover {
+    color: #FF5C01;
+}
+
+@media (max-width: 700px) {
+    .header__logo img {
+        width: 160px;
+        height: 50px;
+    }
+    .header__phone {
+        font-size: 2.2rem;
+        line-height: 2.2rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .header__logo img {
+        width: 118px;
+        height: 37px;
+    }
+    .header__phone {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+    }
+    .actions__lang {
+        line-height: 1.1rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .top-nav__wrapper {
+        flex-direction: column;
+    }
+}
+
+.header__cta {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.cta__content {
+    font-weight: 700;
+    font-size: 2.1rem;
+    line-height: 2.5rem;
+}
+
+.cta__content--big {
+    font-size: 4rem;
+}
+
+@media (max-width: 1120px) {
+    .cta__content {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+    
+    .cta__content--big {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 920px) {
+    .cta__content {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+    }
+    
+    .cta__content--big {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .cta__content {
+        font-size: 1.3rem;
+        line-height: 1.9rem;
+    }
+    
+    .cta__content--big {
+        font-size: 2.7rem;
+    }
+}
+
+@media (max-width: 635px) {
+    .cta__content {
+        font-size: 1.3rem;
+        line-height: 1.9rem;
+    }
+    
+    .cta__content--big {
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 545px) {
+    .cta__content {
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+    }
+    
+    .cta__content--big {
+        font-size: 1.3rem;
+    }
+}
+
+.header__messenger {
+    display: flex;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.messenger__item {
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 370px;
+}
+
+.messenger__icon--link {
+    width: 70px;
+    height: 70px;
+    margin: 15px 0px 15px 20px;
+    transition: transform 250ms;
+}
+
+.messenger__icon--link:hover {
+    transform: scale(0.95);
+}
+
+.messenger__icon {
+    width: 70px;
+    height: 70px;
+}
+
+.messenger__text {
+    padding: 15px 15px 15px 27px;
+}
+
+.messenger__name {
+    color: #010101;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.messenger__phone a {
+    font-size: 21px;
+    color: #6F6D71;
+    transition: transform 250ms;
+}
+
+.messenger__phone a:hover {
+    color: #FF5C01;
+}
+
+@media (max-width: 870px) {
+    .header__messenger {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 550px) {
+    .header__messenger {
+        display: none;
+    }
+
+    .header__cta {
+        margin-bottom: 9rem;
+    }
+}
+
+.nav {
+    margin-bottom: 3.5rem;
+}
+
+.nav__menu {
+    display: flex;
+    justify-content: center;
+}
+
+.menu__item:not(:last-child) {
+    padding-right: 24px;
+}
+
+.menu__item a {
+    color: #FEFEFE;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.menu__item a:hover {
+    color: #FF5C01;
+}
+
+@media (max-width: 700px) {
+    .nav {
+        display: none;
+    }
+}
+
+
+[class*="__container"] {
+    max-width: 1890px;
+    margin: 0 auto;
+}
+
