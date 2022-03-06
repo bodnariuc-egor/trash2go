@@ -361,13 +361,13 @@ body {
 
 .slider-container {
     display: flex;
+    width: 50%;
 }
-
-
 
 .swiper-main {
     width: 75%;
     height: auto;
+    align-self: center;
 }
 
 .swiper-main .swiper-slide img {
@@ -380,7 +380,8 @@ body {
     width: 20%;
     margin-left: 30px;
     overflow: hidden;
-    /* object-fit: cover; */
+    height: fit-content;
+    align-self: center;
 }
 
 .swiper-nav .swiper-wrapper {
@@ -406,6 +407,7 @@ body {
     top: auto;
     bottom: 10px;
 }
+
 
 /* Services about styles */
 
@@ -433,10 +435,11 @@ body {
 .button-container {
     display: flex;
     gap: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .button {
-    flex: 1;
+    /* flex: 1; */
     font-family: 'Point', Courier, monospace;
     text-align: center;
     padding: 10px 15px;
@@ -444,11 +447,41 @@ body {
     font-weight: 700;
     font-size: 1.1rem;
     border-radius: 10px;
+    line-height: initial;
 }
 
 .button_orange {
     background-color: #FF5C01;
-} */
+}
+
+.tabs__block {
+    padding: 20px;
+    background-color: #FF5C01;
+    display: none;
+}
+
+.tabs__block:target {
+    display: block;
+}
+
+@media (max-width: 1000px) {
+    .services__container {
+        flex-wrap: wrap;
+    }
+
+    .slider-container {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .swiper-nav {
+        height: -webkit-fill-available;
+    }
+
+    .services__about {
+        width: 100%;
+    }
+}
 
 /* All containers style */
 
