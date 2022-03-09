@@ -1,6 +1,7 @@
 // Swiper slider functionality
 const sliderMain = document.querySelector('.swiper-main');
 const sliderNav = document.querySelector('.swiper-nav');
+const sliderMobileOne = document.querySelector('.swiper-mobile-one');
 
   const swiperNav = new Swiper('.swiper-nav', {
     slidesPerView: 3,
@@ -21,4 +22,14 @@ const sliderNav = document.querySelector('.swiper-nav');
     thumbs: {
         swiper: swiperNav,
       },
+  });
+
+  const swiperMobileOne = new Swiper('.swiper-mobile-one', {
+    slidesPerView: 1,
+    speed: 400,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });
