@@ -769,6 +769,7 @@ body {
 .cta__messenger-image {
     width: 68px;
     height: 60px;
+    transition: transform 250ms;
 }
 
 .cta__messenger-name {
@@ -776,6 +777,11 @@ body {
     font-weight: 700;
     font-size: 15px;
 }
+
+.cta__messenger-image:hover {
+    transform: scale(0.95);
+}
+
 
 @media (max-width: 1400px) {
     .cta-text {
@@ -834,11 +840,13 @@ body {
 
 /* Form styles */
 .group-wrapper__container {
+    display: flex;
     padding: 3rem 1rem;
 }
 
 .email-form {
     text-align: center;
+    width: 50%;
 }
 
 .email-form__title {
@@ -849,6 +857,28 @@ body {
 
 .email-form__subtitle {
     color: #6F6D71;
+}
+
+.reviews {
+    width: 48%;
+    padding: 0 1rem;
+    background-image: url(..//img/reviews_background.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+    align-self: center;
+}
+
+.swiper-reviews .swiper-slide {
+    text-align: center;
+}
+
+.swiper-reviews .swiper-slide img {
+    max-width: 404px;
+}
+
+.swiper-button-next--black {
+    color: #010101;
 }
 
 

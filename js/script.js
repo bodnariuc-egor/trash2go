@@ -5,6 +5,7 @@ const sliderMobileOne = document.querySelector('.swiper-mobile-one');
 const sliderMainTwo = document.querySelector('.swiper-main-two');
 const sliderNavTwo = document.querySelector('.swiper-nav-two');
 const sliderMobileTwo = document.querySelector('.swiper-mobile-two');
+const sliderReviews = document.querySelector('.swiper-reviews');
 
   const swiperNav = new Swiper('.swiper-nav', {
     slidesPerView: 3,
@@ -61,6 +62,15 @@ const sliderMobileTwo = document.querySelector('.swiper-mobile-two');
   const swiperMobileTwo = new Swiper('.swiper-mobile-two', {
     slidesPerView: 1,
     speed: 400,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  const swiperReviews = new Swiper('.swiper-reviews', {
+    slidesPerView: 1,
     spaceBetween: 10,
     navigation: {
       nextEl: '.swiper-button-next',
