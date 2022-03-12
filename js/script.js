@@ -6,6 +6,7 @@ const sliderMainTwo = document.querySelector('.swiper-main-two');
 const sliderNavTwo = document.querySelector('.swiper-nav-two');
 const sliderMobileTwo = document.querySelector('.swiper-mobile-two');
 const sliderReviews = document.querySelector('.swiper-reviews');
+const sliderTeam = document.querySelector('.swiper-team');
 
   const swiperNav = new Swiper('.swiper-nav', {
     slidesPerView: 3,
@@ -77,3 +78,20 @@ const sliderReviews = document.querySelector('.swiper-reviews');
       prevEl: '.swiper-button-prev',
     },
   });
+
+  const swiperTeam = new Swiper('.swiper-team', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+
+const dropdown = document.querySelector(".dropdown");
+const toggle = document.querySelector(".toggle-dropdown");
+
+toggle.addEventListener("click", () => {
+  dropdown.classList.toggle("expanded");
+});

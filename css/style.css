@@ -751,6 +751,7 @@ body {
     gap: 5px;
     text-align: center;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 .cta-text {
@@ -847,6 +848,7 @@ body {
 .email-form {
     text-align: center;
     width: 50%;
+    flex: 1;
 }
 
 .email-form__title {
@@ -857,10 +859,13 @@ body {
 
 .email-form__subtitle {
     color: #6F6D71;
+    font-size: 20px;
+    padding-bottom: 1.5rem;
 }
 
 .reviews {
     width: 48%;
+    flex: 1;
     padding: 0 1rem;
     background-image: url(..//img/reviews_background.png);
     background-repeat: no-repeat;
@@ -875,12 +880,340 @@ body {
 
 .swiper-reviews .swiper-slide img {
     max-width: 404px;
+    vertical-align: middle;
 }
 
 .swiper-button-next--black {
     color: #010101;
+    background-image: url(../img/right_arrow_mini.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
 }
 
+.swiper-button-next--black::after {
+    display: none;
+}
+
+.swiper-button-prev--black {
+    color: #010101;
+    background-image: url(../img/left_arrow_mini.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+}
+
+.swiper-button-prev--black::after {
+    display: none;
+}
+
+.reviews__logo {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .group-wrapper__container {
+        flex-direction: column;
+    }
+
+    .email-form {
+        width: 100%;
+    }
+
+    .reviews {
+        width: 100%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        background-image: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .reviews__logo {
+        display: block;
+        flex: 1;
+        text-align: center;
+    }
+
+    .swiper-reviews {
+        flex: 2;
+    }
+}
+
+@media (max-width: 800px) {
+    .swiper-reviews .swiper-slide img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .reviews__logo {
+        flex: none;
+        width: 20%;
+        padding-right: 1rem;
+    }
+    
+    .swiper-reviews .swiper-slide img {
+        width: 70%;
+    }
+
+    .swiper-button-prev--black {
+        background-size: 70% auto;
+    }
+
+    .swiper-button-next--black {
+        background-size: 70% auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .reviews__logo {
+        display: none;
+    }
+}
+
+@media (max-width: 380px) {
+    .swiper-button-prev--black {
+        background-size: 60% auto;
+    }
+
+    .swiper-button-next--black {
+        background-size: 60% auto;
+    }
+
+    .swiper-reviews .swiper-slide img {
+        width: 75%;
+    }
+}
+
+
+/* Team and cases styles */
+
+.group-wrapper__container--team__cases {
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.team {
+    width: 47.5%;
+}
+
+.swiper-team {
+    margin-bottom: 2rem;
+}
+
+.swiper-team .swiper-slide {
+    text-align: center;
+}
+
+.swiper-team .swiper-slide img {
+    width: 100%;
+    vertical-align: middle;
+    border-radius: 30px;
+}
+
+.swiper-button-prev--team {
+    color: #010101;
+    background-image: url(../img/team_prev_arrow.svg);
+    background-repeat: no-repeat;
+    background-size: 90% auto;
+    background-position: center;
+}
+
+.swiper-button-prev--team::after {
+    display: none;
+}
+
+.swiper-button-next--team {
+    color: #010101;
+    background-image: url(../img/team_next_arrow.svg);
+    background-repeat: no-repeat;
+    background-size: 90% auto;
+    background-position: center;
+}
+
+.swiper-button-next--team::after {
+    display: none;
+}
+
+.team__title, .case_title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #010101;
+    margin-bottom: 1.5rem;
+}
+
+.team_content {
+    font-weight: 400;
+    font-size: 14px;
+    color: #6F6D71;
+    padding-bottom: 1rem;
+}
+
+.team_content--bold {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.cases {
+    width: 50%;
+}
+
+.cases_wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+
+.cases__image {
+    width: 100%;
+    border-radius: 30px;
+    margin-bottom: 2rem;
+}
+
+.case_content {
+    display: flex;
+}
+
+.case-icon {
+    margin-right: 15px;
+    height: fit-content;
+    width: 60px;
+}
+
+.case-text-title {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.case-description {
+    font-size: 14px;
+    color: #6F6D71;
+}
+
+@media (max-width: 1200px) {
+    .cases_wrapper {
+        row-gap: 3.5rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .group-wrapper__container--team__cases {
+        flex-direction: column;
+    }
+
+    .team, .cases {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .cases_wrapper {
+        row-gap: 2rem;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .group-wrapper__container {
+        padding: 1.5rem 1rem;
+    }
+
+    .team, .cases {
+        margin-bottom: 1.5rem;
+    }
+
+    .team_content-extra {
+        display: none;
+    }
+
+    .swiper-button-prev--team {
+        background-size: 70% auto;
+    }
+
+    .swiper-button-next--team {
+        background-size: 70% auto;
+    }
+
+    .team__title, .team_content, .case_title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .swiper-button-prev--team {
+        background-size: 40% auto;
+    }
+
+    .swiper-button-next--team {
+        background-size: 40% auto;
+    }
+}
+
+/* Comfort section styles */
+
+.comfort-opener {
+    text-align: center;
+}
+
+.comfort-opener__text {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.toggle-dropdown {
+    cursor: pointer;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+.dropdown {
+    background-color: black;
+    padding: 1rem 2rem;
+    background-image: url('../img/comfort_backgr.png');
+    background-position: center;
+    background-size: cover;
+    display: none;
+}
+
+
+.dropdown__header {
+    font-weight: 700;
+    font-size: 5rem;
+    color: white;
+    line-height: 100%;
+    margin-top: 2rem;
+}
+
+.dropdown-description {
+    font-size: 14px;
+    color: white;
+}
+
+.dropdown-description--bold {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.dropdown.expanded {
+    display: block;
+}
+
+@media (max-width: 800px) {
+    .dropdown__header {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .dropdown {
+        border-radius: 15px;
+    }
+
+    .dropdown__header {
+        display: none;
+    }
+}
 
 
 /* All containers style */
