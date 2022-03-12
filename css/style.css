@@ -452,6 +452,10 @@ body {
     line-height: initial;
 }
 
+.button:hover {
+    opacity: 0.8;
+}
+
 .button_orange {
     background-color: #FF5C01;
 }
@@ -1171,6 +1175,14 @@ body {
     background-color: white;
 }
 
+.dropdown-arrow {
+    transition: transform 250ms;
+}
+
+.dropdown-arrow:hover {
+    transform: translateY(-7px);
+  }
+
 .dropdown {
     background-color: black;
     padding: 1rem 2rem;
@@ -1356,7 +1368,6 @@ body {
     margin: 8px 8px;
     position: fixed;
     bottom: 5px;
-    /* right: 30px; */
     z-index: 99;
     width: -webkit-fill-available;
 }
