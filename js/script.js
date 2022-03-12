@@ -102,6 +102,7 @@ const sliderTeam = document.querySelector('.swiper-team');
     },
   });
 
+// Dropdown functionality
 
 const dropdown = document.querySelector(".dropdown");
 const toggle = document.querySelector(".toggle-dropdown");

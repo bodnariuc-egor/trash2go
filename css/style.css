@@ -396,18 +396,33 @@ body {
 }
 
 .prev-vertical {
-    left: 50%;
-    transform: rotate(90deg);
-    transform-origin: left center;
     top: 10px;
+    background-image: url(../img/main_slider_arrow_top_orange.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+
+}
+
+.prev-vertical::after {
+    display: none;
 }
 
 .next-vertical {
-    left: 50%;
-    transform: rotate(90deg);
-    transform-origin: left center;
     top: auto;
     bottom: 10px;
+    background-image: url(../img/main_slider_arrow_down_orange.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.next-vertical::after {
+    display: none;
 }
 
 
