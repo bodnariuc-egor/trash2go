@@ -970,6 +970,11 @@ body {
 }
 
 @media (max-width: 600px) {
+
+    .email-form__subtitle {
+        font-size: 14px;
+    }
+
     .reviews__logo {
         flex: none;
         width: 20%;
