@@ -1432,3 +1432,10 @@ body {
     margin: 0 auto;
 }
 
+@media (max-width: 600px) {
+    .comfort__container {
+        margin-bottom: 10rem;
+    }
+}
+
+
