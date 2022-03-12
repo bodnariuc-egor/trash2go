@@ -1,3 +1,17 @@
+// Go to top functionality
+const goTopButton = document.getElementById("go-top-btn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    goTopButton.style.display = "block";
+  } else {
+    goTopButton.style.display = "none";
+  }
+}
+
 // Swiper slider functionality
 const sliderMain = document.querySelector('.swiper-main');
 const sliderNav = document.querySelector('.swiper-nav');
@@ -95,3 +109,5 @@ const toggle = document.querySelector(".toggle-dropdown");
 toggle.addEventListener("click", () => {
   dropdown.classList.toggle("expanded");
 });
+
+
