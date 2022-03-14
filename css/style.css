@@ -952,6 +952,7 @@ body {
 .contacts__button {
     margin: 15px auto 15px auto;
     padding: 10px 25px;
+    text-transform: uppercase;
 }
 
 @media (max-width: 600px) {
