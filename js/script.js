@@ -102,6 +102,97 @@ const sliderTeam = document.querySelector('.swiper-team');
     },
   });
 
+// Tabs functionality
+
+const tabs = document.querySelector(".tabs");
+const tabButton = document.querySelectorAll(".button-tab");
+const contents = document.querySelectorAll(".tabs__block");
+const closeArrow = document.querySelectorAll(".close-arrow__link");
+
+tabs.onclick = e => {
+  const id = e.target.dataset.id;
+  if (id) {
+    tabButton.forEach(btn => {
+      btn.classList.remove("active");
+    });
+    e.target.classList.add("active");
+
+    contents.forEach(content => {
+      content.classList.remove("active");
+    });
+    const element = document.getElementById(id);
+    element.classList.add("active");
+  }
+};
+
+const tabsViolet = document.querySelector(".tabs-violet");
+const tabButtonViolet = document.querySelectorAll(".button_violet");
+const contentsViolet = document.querySelectorAll(".tabs__block--violet");
+
+tabsViolet.onclick = b => {
+  const id = b.target.dataset.id;
+  if (id) {
+    tabButtonViolet.forEach(btn => {
+      btn.classList.remove("active");
+    });
+    b.target.classList.add("active");
+
+    contentsViolet.forEach(content => {
+      content.classList.remove("active");
+    });
+    const element = document.getElementById(id);
+    element.classList.add("active");
+  }
+};
+
+const tabsGreen = document.querySelector(".tabs-green");
+const tabButtonGreen = document.querySelectorAll(".button_green");
+const contentsGreen = document.querySelectorAll(".tabs__block--green");
+
+tabsGreen.onclick = f => {
+  const id = f.target.dataset.id;
+  if (id) {
+    tabButtonGreen.forEach(btn => {
+      btn.classList.remove("active");
+    });
+    f.target.classList.add("active");
+
+    contentsGreen.forEach(content => {
+      content.classList.remove("active");
+    });
+    const element = document.getElementById(id);
+    element.classList.add("active");
+  }
+};
+
+
+// tabsViolet.onclick = e => {
+//   const id = e.target.dataset.id;
+//   if (id) {
+//     tabButton.forEach(btn => {
+//       btn.classList.remove("active");
+//     });
+//     e.target.classList.add("active");
+
+//     contents.forEach(content => {
+//       content.classList.remove("active");
+//     });
+//     const element = document.getElementById(id);
+//     element.classList.add("active");
+//   }
+// };
+
+
+for (let i = 0 ; i < closeArrow.length; i++) {
+  closeArrow[i].addEventListener('click' , function() {
+    contents.forEach(content => {
+      content.classList.remove("active");
+    });
+  }); 
+}
+
+
+
 // Dropdown functionality
 
 const dropdown = document.querySelector(".dropdown");
@@ -110,5 +201,3 @@ const toggle = document.querySelector(".toggle-dropdown");
 toggle.addEventListener("click", () => {
   dropdown.classList.toggle("expanded");
 });
-
-

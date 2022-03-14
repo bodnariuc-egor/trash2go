@@ -473,6 +473,11 @@ body {
 
 .button_orange {
     background-color: #FF5C01;
+    cursor: pointer;
+}
+
+.button-tab.active {
+    opacity: 0.8;
 }
 
 .tabs__block {
@@ -482,9 +487,14 @@ body {
     border-radius: 10px;
 }
 
-.tabs__block:target {
+.tabs__block.active {
     display: block;
 }
+
+
+/* .tabs__block:target {
+    display: block;
+} */
 
 .tabs__text-header {
     color: white;
@@ -503,6 +513,15 @@ body {
 }
 
 .close-arrow {
+    margin-left: auto;
+    display: block;
+    margin-top: 10px;
+    width: 18px;
+    height: auto;
+}
+
+.close-arrow__link {
+    cursor: pointer;
     margin-left: auto;
     display: block;
     margin-top: 10px;
@@ -628,10 +647,19 @@ body {
 
 .button_violet {
     background-color: #A813D1;
+    cursor: pointer;
+}
+
+.button_violet.active {
+    opacity: 0.8;
 }
 
 .tabs__block--violet {
     background-color: #A813D1;
+}
+
+.tabs__block--violet.active {
+    display: block;
 }
 
 .swiper-main-two {
@@ -749,6 +777,11 @@ body {
 
 .button_green {
     background-color: #80D3AD;
+    cursor: pointer;
+}
+
+.button_green.active {
+    opacity: 0.8;
 }
 
 .tabs__block--green {
